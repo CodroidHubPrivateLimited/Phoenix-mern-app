@@ -1,8 +1,8 @@
 import './App.css';
-import { BrowserRouter as Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import ConditionalRoute from './routes/conditionalRoute';
 import UserNavBar from './components/navigation/userNavBar';
-
+import UseFooter from './components/footer/footer';
 function App() {
   return (
     <div className="App">
@@ -10,6 +10,7 @@ function App() {
       <Routes>
         <Route path='/*' element={<ConditionalRoute />} />
       </Routes>
+      <UseFooter/>
     </div>
   );
 }
