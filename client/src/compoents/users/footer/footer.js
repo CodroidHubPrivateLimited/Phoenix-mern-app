@@ -4,7 +4,7 @@ import './nav.css'; // Import your CSS file for styling
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="footerleft">
+      <div className="footer-left">
         <h2>School Name</h2>
         <p>Our mission is to provide high-quality education that nurtures and inspires students to achieve their full potential.</p>
         <div className="social-media">
@@ -13,20 +13,20 @@ const Footer = () => {
           <a href="https://www.instagram.com" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
         </div>
       </div>
-      <div className="footermiddle">
+      <div className="footer-middle">
         <ul>
           <li><a href="/about">About Us</a></li>
+          <li><a href="/faculties">Faculties</a></li>
+          <li><a href="/scholarships">Scholarships</a></li>
+          <li><a href="/news">News</a></li>
           <li><a href="/contact">Contact Us</a></li>
-          <li><a href="/admissions">Admissions</a></li>
-          <li><a href="/academics">Academics</a></li>
-          <li><a href="/events">Events</a></li>
         </ul>
       </div>
-      <div className="footer__right">
+      <div className="footer-right">
         <h3>Contact</h3>
-        <p>123 School Street, City, State, ZIP</p>
-        <p>Email: info@school.com</p>
-        <p>Phone: 123-456-7890</p>
+        <p>Caltech University, 123 School Street, City</p>
+        <p>Email: School@school.com</p>
+        <p>Phone: +977 **********</p>
       </div>
     </footer>
   );
