@@ -1,7 +1,8 @@
 import { Route, Routes } from "react-router-dom"
 import Home from "../pages/users/01-home"
-import About from '../compoents/about/about';
+import AboutUs from '../pages/users/02-about-us';
 import Scholarships from "../compoents/users/homePageComponents/03-scholarships"
+import AdminLogin from "../compoents/admin/forms/login";
 
 
 function ConditionalRoute() {
@@ -9,9 +10,11 @@ function ConditionalRoute() {
 
     return (<>
         <Routes>
+            <Route path='/admin-login' element={<AdminLogin />} />
+
             <Route path='/' element={<Home />} />
-            <Route path="/about" element={<About />}/>
-            <Route path='/Scholarships' element={<Scholarships/>} />
+            <Route path="/about-us" element={<AboutUs />} />
+            <Route path='/Scholarships' element={<Scholarships />} />
         </Routes>
     </>)
 
