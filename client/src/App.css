@@ -111,3 +111,64 @@ a {}
     height: 100%;
     object-fit: cover;
 }
+.container {
+    padding: 20px;
+    background-color: white;
+    text-align: center;
+}
+
+.container h3 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.scholarship {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.scholarship-cont {
+    /* background-color:#8a2be2; */
+    color: #000000;
+    border-radius: 10px;
+    padding: 10px;
+    border: 2px solid #8a2be2;
+    height: 250px;
+    width: 250px;
+    
+}
+.pics{
+    height: 100%;
+    width: 100%;
+}
+.pics img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    opacity: 0.5;
+}
+h4 {
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    bottom: 130px;
+
+}
+
+.scholarship-card p {
+    margin: 5px 0;
+}
+
+.read-more {
+    margin-top: 20px;
+    color: purple;
+    font-weight: bold;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
