@@ -172,3 +172,99 @@ h4 {
     text-decoration: underline;
     cursor: pointer;
 }
+
+
+/* faculty pages  */
+.top-main-container{
+    display: flex;
+    flex-direction: column;
+}
+.faculty-heading-container{
+    background-color: aliceblue;
+    height: 300px;
+    width: 80%;
+    padding: 50px;
+    margin-left: 130px;
+    position: relative;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.provided-faculty-heading{
+    font-size: 40px;
+}
+.faculty-heading-container .desciption{
+    padding: 20px;
+    font-size: small;
+}
+
+.faculty-main-container1{
+    padding: 100px;
+    padding-top: 60px;
+    padding-bottom: 50px;
+    padding-left: 150px;
+    display: flex;
+    gap: 20px;
+    
+}
+
+.faculty-container{
+    background-color: aliceblue;
+    text-align: center;
+    align-items: center;
+    box-shadow: black 0 4 3 4;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 250px;
+}
+.faculty-container:hover{
+    font-size: 45px;
+    height: 330px;
+    width: 280px;
+    box-shadow: rgb(155, 153, 153) 3px 3px 3px ;
+
+}
+.see-more-link{
+    font-size: 15px;
+    padding-top: 190px;
+}
+
+.see-more-link:hover{
+    text-decoration: underline;
+
+}
+
+.faculty-main-link-container{
+    position: relative;
+    font-size: 20px;
+    margin-top: 05px;
+    margin-bottom: 80px;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.faculty-link a {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: purple;
+    text-align: start;
+}
+.faculty-link:hover{
+
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.faculty-image-container{
+    height: 100%;
+    width: 100%;
+}
