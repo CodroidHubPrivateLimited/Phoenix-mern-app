@@ -1,0 +1,16 @@
+
+.no-page-container {
+    background-color:darkgray ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.page-not-found-txt {
+    background-color:darkgray ;
+    color: brown;
+    font-size: 50px;
+    text-align: center;
+}
