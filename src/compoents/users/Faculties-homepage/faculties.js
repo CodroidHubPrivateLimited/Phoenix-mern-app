@@ -1,12 +1,10 @@
 import React from "react";
 import "../../../App.css";
-import NavBar from "../navigation/navbar";
 
 
 function Faculties () {
   return (
     <>
-      <NavBar />
       <div class="top-main-container">
         <div class="faculty-heading-container">
           <div>
