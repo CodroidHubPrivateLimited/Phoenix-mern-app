@@ -1,51 +1,75 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './sign_in.css';
 
-const SignIn = () => {
+const SignUp = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
 
-  const handleSubmit = () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-    try {
-      const response =axios.post('http://localhost:8000/signin', {
-        email,
-        password
-      })
-    } catch (error) {
-      console.log(error);
+    if (password !== confirmPassword) {
+      alert("Passwords do not match");
+      return;
     }
 
-    setEmail('');
-    setPassword('');
+    try {
+      const response = await axios.post('http://localhost:8000/admin-signin', {
+        email,
+        password
+      });
+
+      console.log('Sign-up successful!', response.data);
+
+    } catch (error) {
+      console.error('Sign-up error:', error);
+
+    }
   };
 
   return (
-    <div>
-      <h2>Sign In</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Email:</label>
-          <input 
-            type="email" 
-            value={email} 
-            onChange={(e) => setEmail(e.target.value)} 
-            required 
+    <div className="outer-container">
+      <div className="signup-container">
+        <label>Sign Up</label>
+
+        <div className="inputs">
+          <input
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Email"
+            type="email"
+          />
+
+          <input
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Password"
+            type="password"
+          />
+
+          <input
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+            placeholder="Confirm Password"
+            type="password"
           />
         </div>
-        <div>
-          <label>Password:</label>
-          <input 
-            type="password" 
-            value={password} 
-            onChange={(e) => setPassword(e.target.value)} 
-            required 
-          />
+
+        <button
+          onClick={handleSubmit}
+          className="button signup-button"
+        >
+          Sign Up now
+        </button>
+
+        <div className="links">
+          <p className="link-text">Already have an account? Log in</p>
         </div>
-        <button type="submit">Sign In</button>
-      </form>
+      </div>
     </div>
   );
 };
 
-export default SignIn;
+export default SignUp;
