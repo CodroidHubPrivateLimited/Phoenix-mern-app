@@ -1,5 +1,5 @@
 import "./App.css"
-import { Routes, Route } from "react-router-dom"
+import {BrowserRouter as Router,Route,Routes} from "react-router-dom"
 import NavBar from '../src/compoents/users/navigation/navbar';
 import ConditionalRoute from "./routes/conditionalRouting";
 
