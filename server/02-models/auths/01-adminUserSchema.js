@@ -17,3 +17,5 @@ const adminUserSchema = ({
         type: Date
     }
 })
+const AdminUser = mongoose.model("AdminUser", adminUserSchema)
+module.exports = AdminUser
