@@ -11,8 +11,8 @@ function ConditionalRoute() {
 
     return (<>
         <Routes>
-            <Route path='/admin-login' element={<AdminLogin />} />
-            <Route path="/signup" element={<SignUp/>}/>
+            <Route path='/login' element={<AdminLogin />} />
+            <Route path="/signin" element={<SignUp/>}/>
             <Route path='/' element={<Home />} />
             <Route path="/about-us" element={<AboutUs />} />
             <Route path='/Scholarships' element={<Scholarships />} />
