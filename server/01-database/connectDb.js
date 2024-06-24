@@ -1,13 +1,15 @@
 const mongoose = require('mongoose')
 
-const ConnectDb = () => {
+async function ConnectDB() {
     try {
-        mongoose.set('strictQuery', true);
-        const data = mongoose.connect("mongodb://localhost:27017/phoenix-mern-app");
-        if (data) console.log(`connected to MongoDb`)
+        data = await mongoose.connect("mongodb://localhost:27017/Jake");
+        if (data){
+            console.log(`connected to ${mongoose.connection.host}`);
+        }
+        
     } catch (err) {
-        console.log("Db Connection error", err)
+        console.log("Db Connection error", err);
     }
 }
 
-module.exports = ConnectDb
+module.exports = ConnectDB

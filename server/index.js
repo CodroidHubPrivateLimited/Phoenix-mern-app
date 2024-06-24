@@ -1,13 +1,18 @@
-const express = require('express')
+const express = require('express'); // importing express library
+const mongoose = require('mongoose');
+const cors = require('cors');
 const app = express()
-const ConnectDb = require("./01-database/connectDb")
+const ConnectDb = require("./01-database/connectDb.js")
 const port = 8000
 
-ConnectDb()
 
-app.get('/', (req, res) => {
-    res.send('Hello World!')
-})
+
+app.use(express.json());
+app.use(cors());
+
+const adminUserRoutes = require('./04-routes/auth/adminUserRoutes.js')
+ConnectDb()
+app.use('/', adminUserRoutes)
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
