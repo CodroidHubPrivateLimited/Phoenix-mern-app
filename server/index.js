@@ -5,7 +5,7 @@ const ConnectDb = require("./01-database/connectDb")
 const port = 8000
 const ConnecdDb = require("./01-database/connectDb")
 ConnecdDb()
-
+console,log(Date.now())
 ConnectDb()
 
 app.get('/', (req, res) => {
