@@ -1,66 +1,70 @@
-import React, { useState } from 'react'
-import axios from "axios"
-import "./login.css"
-import NavBar from '../../users/navigation/navbar'
+import React, { useState } from 'react';
+import axios from 'axios';
+import './login.css';
+import NavBar from '../../users/navigation/navbar';
 
 function AdminLogin() {
-    const [email, setEmail] = useState("")
-    const [password, setPassword] = useState("")
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
 
-    const handleSubmit = () => {
+    const handleSubmit = async () => {
         try {
-            const response = axios.post(`http://localhost:8000/admin-login`, {
+            const response = await axios.post('http://localhost:8000/admin-login', {
                 email,
                 password
-            })
+            });
+            // Handle successful login here
         } catch (error) {
-            console.log(error)
+            // Check if error response exists and set error message
+            if (error.response && error.response.data) {
+                setError(error.response.data.message);
+            } else {
+                setError('An unexpected error occurred');
+            }
         }
-    }
+    };
 
     return (
         <body className='outer-container'>
-            <div class="login-container">
-
+            <div className='login-container'>
                 <label>Log in</label>
-
-                <div class="inputs">
+                <div className='inputs'>
                     <input
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        placeholder="Email"
-                        type="email"
+                        placeholder='Email'
+                        type='email'
+                        className={error ? 'error' : ''}
                     />
-
+                    {error && <span className='error-message'>Please enter a valid email address.</span>}
                     <input
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
-                        placeholder="Password"
-                        type="password" />
+                        placeholder='Password'
+                        type='password'
+                        className={error ? 'error' : ''}
+                    />
                 </div>
-
-                {/* <div class="checkbox-container">
-                    <input type="checkbox" class="checkbox" />
-                    <p>Keep me logged in</p>
-                </div> */}
-
                 <button
                     onClick={handleSubmit}
-                    class="button login-button"
-                >Log in now</button>
-
-                <div class="links">
+                    className='button login-button'
+                >
+                    Log in now
+                </button>
+                <div className='links'>
                     <a
-                        class="link-text"
+                        className='link-text'
                         href='/admin-signup'
-                    >Create new account</a>
-                    <p class="link-text">Forgot password</p>
+                    >
+                        Create new account
+                    </a>
+                    <p className='link-text'>Forgot password</p>
                 </div>
-
+                {error && <div className='error-message'>{error}</div>}
             </div>
         </body>
-
-    )
+    );
 }
 
-export default AdminLogin
+export default AdminLogin;
