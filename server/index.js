@@ -11,8 +11,10 @@ app.use(express.json());
 app.use(cors());
 
 const adminUserRoutes = require('./04-routes/auth/adminUserRoutes.js')
+const JakeUserRoutes = require('./04-routes/auth/JakeUserRoutes.js')
 ConnectDb()
 app.use('/', adminUserRoutes)
+app.use('/jake',JakeUserRoutes)
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
