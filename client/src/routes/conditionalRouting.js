@@ -3,7 +3,6 @@ import Home from "../pages/users/01-home"
 import AboutUs from '../pages/users/02-about-us';
 import Scholarships from "../compoents/users/homePageComponents/03-scholarships"
 import AdminLogin from "../compoents/admin/forms/login";
-import ContactUs from "../compoents/users/homePageComponents/05-contactUs";
 
 
 function ConditionalRoute() {
@@ -12,7 +11,6 @@ function ConditionalRoute() {
     return (<>
         <Routes>
             <Route path='/admin-login' element={<AdminLogin />} />
-            <Route path='/contactus' element={<ContactUs />} />
 
             <Route path='/' element={<Home />} />
             <Route path="/about-us" element={<AboutUs />} />
