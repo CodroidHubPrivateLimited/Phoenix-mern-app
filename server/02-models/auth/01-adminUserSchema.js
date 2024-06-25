@@ -1,30 +1,29 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose")
 
 const adminUserSchema = ({
-    email:{
-        type: String,
-        required: true
-    },
-    pasword:{
-        type: String,
-        required: true
-    },
-    phoneNumber:{
+
+    email: {
         type: String
     },
-    userRole:{
+
+    password: {
         type: String
     },
-    createdAt:{
-        type: Date,
-        default: Date.now
+
+    phoneNumber: {
+        type: String
     },
-    updatedAt:{
-        type: Date,
-        default: Date.now
-    }
 
-    });
+    userRole: {
+        type: String
+    },
 
-    const AdmiUser = mongoose.model('AdminUser',adminUserSchema);
-    module.exports = AdmiUser       
+    createdAt: { type: Date, default: Date.now },
+
+    updatedAt: { type: Date, default: Date.now }
+
+})
+
+const AdminUser = mongoose.model("AdminUser", adminUserSchema)
+
+module.exports = AdminUser
