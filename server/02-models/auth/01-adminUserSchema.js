@@ -10,7 +10,7 @@ const adminUserSchema = ({
         type: String
     },
 
-    phoneNUmber: {
+    phoneNumber: {
         type: String
     },
 

@@ -50,7 +50,10 @@ function AdminLogin() {
                 >Log in now</button>
 
                 <div class="links">
-                    <p class="link-text">Create new account</p>
+                    <a
+                        class="link-text"
+                        href='/admin-signup'
+                    >Create new account</a>
                     <p class="link-text">Forgot password</p>
                 </div>
 

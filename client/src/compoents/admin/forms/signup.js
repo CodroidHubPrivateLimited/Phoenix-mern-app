@@ -14,14 +14,18 @@ const SignUp = () => {
       alert("Passwords do not match");
       return;
     }
-
     try {
-      const response = await axios.post('http://localhost:8000/signup', {
-        email,
-        password
+      const res = await axios.post('http://localhost:8000/admin-signup', {
+        email: email,
+        password: password
       });
+      if (res.status == 200) {
 
-      console.log('Sign-up successful!', response.data);
+        alert("SIGNED UP SUCCESSFULLY")
+
+      }
+
+      console.log('Sign-up successful!', res.data);
 
     } catch (error) {
       console.error('Sign-up error:', error);
@@ -65,7 +69,9 @@ const SignUp = () => {
         </button>
 
         <div className="links">
-          <p className="link-text">Already have an account? Log in</p>
+          <a className="link-text"
+          href='/admin-login'
+          >Already have an account? Log in</a>
         </div>
       </div>
     </div>
