@@ -1,11 +1,57 @@
-.Hi{
-    color:black;
-    border: none;
-    font-size: large;
-    width:100%;
-    padding-left: 20px;
-    padding-right: 20px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+body {
+    font-family: Arial, sans-serif; 
+    background-color: #f0f0f0;
+}
+
+.main-container{
+    background-color:rgb(235, 198, 198);
+    position: relative;
+    height: 200px;
+}
+
+.container {
+    max-width: 600px;    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    left: 150px;
+    top: 60px;
+
+
+}
+
+h3 {
+    position: absolute;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: #333;
+    left: 180px;
+}
+p{
+    position: absolute;
+    margin-top: 55px;
+    margin-bottom: 20px;
+    color: #333;
+    left: 180px;
+}
+
+form {
+    display: grid;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
 input[type="text"],
 input[type="email"],
 textarea {
@@ -15,36 +61,70 @@ textarea {
     border: 1px solid #ccc;
     border-radius: 4px;
 }
-.submit{
-    border-radius: 5px;
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
     border: none;
-    width: 100%;
-    color: black;
-    font-size: large;
-    background-color:#3e42ad;
-
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
 }
-.heading{
-    font-size: 30px;
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.img-container{
+    position: absolute;
+    width: 200px;
+    height: 150px;
+    left: 800px;
+    top: 20px;
+}
+.image1{
+    border-radius: 50%;
+    margin-top: -120px;
+}
+.img-container1{
+    position: absolute;
+    width: 40px;
+    height: 20px;
+    left: 830px;
+    top: 50px;
+}
+
+.img-container2{
+    position: absolute;
+    width: 40px;
+    height: 20px;
+    left: 880px;
+    top: 50px;
+}
+
+
+.img-container3{
+    position: absolute;
+    width: 40px;
+    height: 20px;
+    left: 930px;
+    top: 48px;
+}
+
+.footer {
+    margin-top: 400px;
+}
+
+.google_map{
+margin-left: 580px;
+margin-top: -308px;
+}
+
+label {
     font-weight: bold;
-    padding-left: 20px;
-    padding-top: 30px;
-    padding-bottom: 20px;
-    color: blueviolet;
-    display: flex;
-    align-items: center;
-
-}
-.flex-container{
- display: flex;
-    flex: 1;
-    padding-right: 40px;
-     
-}
-.main-container {
-    background-color:floralwhite;
-}
-.icon{
-    height: 50px;
-    width: 90px;
+    margin-left: -500px;
 }
