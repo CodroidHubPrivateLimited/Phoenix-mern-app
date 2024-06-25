@@ -2,11 +2,15 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './login.css';
 import NavBar from '../../users/navigation/navbar';
+import { useNavigate } from 'react-router-dom';
 
 function AdminLogin() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
+    const [success, setSuccess] = useState('');
+
+    const navigate = useNavigate();
 
     const handleSubmit = async () => {
         try {
@@ -14,9 +18,14 @@ function AdminLogin() {
                 email,
                 password
             });
-            // Handle successful login here
+            setSuccess('Logged in successfully');
+            setError('');
+            setTimeout(() => {
+                navigate('/'); // Adjust the path as per your route setup
+            }, 2000);
         } catch (error) {
-            // Check if error response exists and set error message
+            setSuccess('');
+           
             if (error.response && error.response.data) {
                 setError(error.response.data.message);
             } else {
@@ -26,7 +35,7 @@ function AdminLogin() {
     };
 
     return (
-        <body className='outer-container'>
+        <div className='outer-container'>
             <div className='login-container'>
                 <label>Log in</label>
                 <div className='inputs'>
@@ -37,7 +46,7 @@ function AdminLogin() {
                         type='email'
                         className={error ? 'error' : ''}
                     />
-                    {error && <span className='error-message'>Please enter a valid email address.</span>}
+                    {error && !success && <span className='error-message'>{error}</span>}
                     <input
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
@@ -62,8 +71,9 @@ function AdminLogin() {
                     <p className='link-text'>Forgot password</p>
                 </div>
                 {error && <div className='error-message'>{error}</div>}
+                {success && <div className='success-message'>{success}</div>}
             </div>
-        </body>
+        </div>
     );
 }
 
