@@ -148,30 +148,3 @@ button {
     background: skyblue;
     opacity: 0.8;
 }
-.error {
-    border-color: red;
-}
-
-.error-message {
-    color: red;
-    font-size: 0.875em;
-    margin-top: 0.25em;
-}
-
-.inputs input.error {
-    border-color: red;
-}
-.password-container {
-    display: flex;
-    align-items: center;
-  }
-  
-  .password-container input {
-    flex: 1;
-  }
-  
-  .toggle-password {
-    margin-left: 10px;
-    padding: 5px;
-    cursor: pointer;
-  }
