@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import './login.css';
-import NavBar from '../../users/navigation/navbar';
 import { useNavigate } from 'react-router-dom';
+import './login.css';
 
 function AdminLogin() {
     const [email, setEmail] = useState('');
@@ -21,13 +20,13 @@ function AdminLogin() {
             setSuccess('Logged in successfully');
             setError('');
             setTimeout(() => {
-                navigate('/'); // Adjust the path as per your route setup
+                navigate('/');
             }, 2000);
         } catch (error) {
             setSuccess('');
-           
+
             if (error.response && error.response.data) {
-                setError(error.response.data.message);
+                setError(error.response.data.msg);
             } else {
                 setError('An unexpected error occurred');
             }
@@ -70,7 +69,6 @@ function AdminLogin() {
                     </a>
                     <p className='link-text'>Forgot password</p>
                 </div>
-                {error && <div className='error-message'>{error}</div>}
                 {success && <div className='success-message'>{success}</div>}
             </div>
         </div>
