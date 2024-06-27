@@ -25,7 +25,10 @@ const SignUp = () => {
     e.preventDefault();
     if (isSubmitting) return;
 
-    let validationErrors = {};
+    let validationErrors = {
+      // email : "Invalid email format",
+      // password : "Password must be at least 8 characters long, contain at least one uppercase letter, one lowercase letter, and one number"
+    };
 
     if (!validateEmail(email)) {
       validationErrors.email = "Invalid email format";
@@ -78,12 +81,12 @@ const SignUp = () => {
             disabled={isSubmitting}
           />
           {errors.email && <p className="error-text">{errors.email}</p>}
-          
+
           <div className="password-input-container">
             <input
+              placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              placeholder="Password"
               type={showPassword ? "text" : "password"}
               disabled={isSubmitting}
             />
@@ -95,8 +98,9 @@ const SignUp = () => {
               {showPassword ? "Hide" : "Show"}
             </button>
           </div>
+          {/* {errors.password && <p className="error-text">{errors.password}</p>} */}
           {errors.password && <p className="error-text">{errors.password}</p>}
-          
+
           <input
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
@@ -106,7 +110,7 @@ const SignUp = () => {
           />
           {errors.confirmPassword && <p className="error-text">{errors.confirmPassword}</p>}
         </div>
-        
+
         <button
           onClick={handleSubmit}
           className="button signup-button"
@@ -114,7 +118,7 @@ const SignUp = () => {
         >
           {isSubmitting ? 'Signing Up...' : 'Sign Up now'}
         </button>
-        
+
         {errors.form && <p className="error-text">{errors.form}</p>}
         {successMessage && <p className="success-text">{successMessage}</p>}
 

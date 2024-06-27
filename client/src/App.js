@@ -14,7 +14,7 @@ function App() {
       <Routes>
         <Route path='/*' element={<ConditionalRoute />} />
       </Routes>
-      <Footer/>
+      <Footer />
     </>
   );
 }

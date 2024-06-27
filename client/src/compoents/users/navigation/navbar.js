@@ -14,12 +14,12 @@ const NavBar = () => {
                 <div
                     class="links-container"
                 >
-                    <a>Home</a>
-                    <a>About us</a>
-                    <a>Faculties</a>
-                    <a>Scholarships</a>
-                    <a>News</a>
-                    <a>Contact us</a>
+                    <a href="/">Home</a>
+                    <a href="/about-us">About us</a>
+                    <a href="/faculties">Faculties</a>
+                    <a href="/scholarships">Scholarships</a>
+                    <a href="/news">News</a>
+                    <a href="/contact-us">Contact us</a>
                 </div>
 
                 <div
