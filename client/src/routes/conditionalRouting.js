@@ -16,7 +16,7 @@ function ConditionalRoute() {
 
             <Route path='/' element={<Home />} />
             <Route path="/about-us" element={<AboutUs />} />
-            <Route path='/Scholarships' element={<Scholarships />} />
+            <Route path='/scholarships' element={<Scholarships />} />
         </Routes>
     </>)
 

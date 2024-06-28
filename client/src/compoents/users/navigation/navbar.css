@@ -1,0 +1,174 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 42px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+button {
+    background-color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+}
+
+a {}
+
+.navbar {
+    padding-left: 150px;
+    padding-right: 150px;
+    width: 100%;
+    background-color: blueviolet;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.navbar .logo-container {
+    width: 200px;
+}
+
+
+.navbar .links-container {
+    width: 100%;
+    padding-left: 100px;
+    padding-right: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar .button-container {
+    width: 200px;
+}
+
+.homepage-component {
+    width: 100%;
+    padding-left: 150px;
+    padding-right: 150px;
+    display: flex;
+    gap: 50px;
+
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.homepage-component div {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#lhs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#lhs a {
+    width: 100%;
+    color: purple;
+    text-align: start;
+}
+
+#lhs a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#rhs {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    width: 100%;
+    height: 100%;
+}
+
+.img-container {
+    width: 50px;
+    height: 50px;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.container {
+    padding: 20px;
+    background-color: white;
+    text-align: center;
+}
+
+.container h3 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.scholarship {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.scholarship-cont {
+    /* background-color:#8a2be2; */
+    color: #000000;
+    border-radius: 10px;
+    padding: 10px;
+    border: 2px solid #8a2be2;
+    height: 250px;
+    width: 250px;
+    
+}
+.pics{
+    height: 100%;
+    width: 100%;
+}
+.pics img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    opacity: 0.5;
+}
+h4 {
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    bottom: 130px;
+
+}
+
+.scholarship-card p {
+    margin: 5px 0;
+}
+
+.read-more {
+    margin-top: 20px;
+    color: rgb(98, 30, 98);
+    font-weight: bold;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
