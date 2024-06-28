@@ -18,7 +18,7 @@ const NavBar = () => {
                     <p onClick={() => navigate("/faculties")}>faculties</p>
                     <p onClick={() => navigate("/news")}>news</p>
                     <p onClick={() => navigate("/contact-us")}>ContactUs</p>
-                    <p onClick={() => navigate("/events")}>Events</p>
+                    
                     
                 </div>
 
